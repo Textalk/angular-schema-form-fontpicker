@@ -7,6 +7,8 @@ Just about every aspect of this addon is customizable so there are many ways to 
 
 Please note, for simplicty, the options are not watched, so set them, and if changes need to be made, rerender the form.
 
+There are a couple of SVGs inline in the code, these were made by our designer specifically for this project. This is due to us using font-awesome and bootstrap using glyphicons, it's easier this way, less deps.
+
 Installation
 ------------
 The font picker is an add-on to the Bootstrap decorator. To use it, just include

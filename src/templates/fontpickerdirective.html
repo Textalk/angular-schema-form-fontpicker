@@ -4,8 +4,8 @@
   </div>
   <div class="row" ng-if="paneButtons.preset.show && paneButtons.custom.show">
     <div class="btn-group col-xs-12" role="group">
-      <button type="button" ng-click='switchPane("preset")' ng-class="{'btn-primary': activePane === 'preset', 'btn-default': activePane !== 'preset'}" class="btn">{{::paneButtons.preset.text}}</button>
-      <button type="button" ng-click='switchPane("custom")' ng-class="{'btn-primary': activePane === 'custom', 'btn-default': activePane !== 'custom'}" class="btn">{{::paneButtons.custom.text}}</button>
+      <button type="button" ng-click='switchPane("preset")' ng-class="{'btn-primary': activePane === 'preset', 'btn-default': activePane !== 'preset'}" class="btn">{{paneButtons.preset.text}}</button>
+      <button type="button" ng-click='switchPane("custom")' ng-class="{'btn-primary': activePane === 'custom', 'btn-default': activePane !== 'custom'}" class="btn">{{paneButtons.custom.text}}</button>
     </div>
   </div>
   <div class="row" ng-if="activePane === 'custom'">
@@ -52,7 +52,7 @@
       <input class="form-control" ng-model="custom.input"></input>
     </div>
     <div class="col-xs-4 col-md-2">
-      <button class="anytype-btn btn btn-default col-xs-1" type="button" ng-disabled="custom.loading" ng-click="loadCustomFont()">{{::strings.loadButton}}</button>
+      <button class="anytype-btn btn btn-default col-xs-1" type="button" ng-disabled="custom.loading" ng-click="loadCustomFont()">{{strings.loadButton}}</button>
     </div>
   </div>
   <style>
