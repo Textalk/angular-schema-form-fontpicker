@@ -1,6 +1,8 @@
 Fontpicker addon
 =================
 
+[![Bower version](https://badge.fury.io/bo/angular-schema-form-fontpicker.svg)](http://badge.fury.io/bo/angular-schema-form-fontpicker)
+
 Fontpickers for everyone! This fontpicker addon is written from scratch for Angular Schema Form. The only dependency specifically used is the [webfontloader](https://github.com/typekit/webfontloader) for loading the fonts for preview. Currently only Google fonts are supported.
 
 Just about every aspect of this addon is customizable so there are many ways to make it your own. It features a full translation support via the settings as well.
