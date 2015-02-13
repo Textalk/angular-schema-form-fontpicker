@@ -1,4 +1,4 @@
-angular.module('schemaForm').config(
+angular.module('schemaFormFontpicker', ['schemaForm']).config(
 ['schemaFormProvider', 'schemaFormDecoratorsProvider', 'sfPathProvider',
   function(schemaFormProvider,  schemaFormDecoratorsProvider, sfPathProvider) {
 

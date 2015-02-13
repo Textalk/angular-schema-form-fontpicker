@@ -1,5 +1,5 @@
 /*global WebFont: false */
-angular.module('schemaForm').directive('fontPicker', function($q) {
+angular.module('schemaFormFontpicker').directive('fontPicker', function($q) {
   'use strict';
   return {
     restrict: 'AE',

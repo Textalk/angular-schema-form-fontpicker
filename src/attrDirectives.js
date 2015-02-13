@@ -4,7 +4,7 @@
 */
 angular.forEach(['x', 'y', 'width', 'height'], function(name) {
   var ngName = 'ng' + name[0].toUpperCase() + name.slice(1);
-  angular.module('schemaForm').directive(ngName, function() {
+  angular.module('schemaFormFontpicker').directive(ngName, function() {
     return function(scope, element, attrs) {
       attrs.$observe(ngName, function(value) {
         attrs.$set(name, value);
