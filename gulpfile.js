@@ -19,7 +19,7 @@ gulp.task('minify', function() {
                     quotes: true
                   }))
                   .pipe(templateCache({
-                    module: 'schemaFormFontpicker',
+                    module: 'schemaForm',
                     root: 'directives/decorators/bootstrap/fontpicker/'
                   }))
     );
