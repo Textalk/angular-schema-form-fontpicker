@@ -23,7 +23,7 @@ angular.module('schemaFormFontpicker', ['schemaForm']).config(
 
 
 /*global WebFont: false */
-angular.module('schemaFormFontpicker').directive('fontPicker', function($q) {
+angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', function($q) {
   'use strict';
   return {
     restrict: 'AE',
@@ -239,7 +239,7 @@ angular.module('schemaFormFontpicker').directive('fontPicker', function($q) {
       }
     }
   };
-});
+}]);
 
 /*
   This is a fix for using dynamic values for svg attributes without errors.
