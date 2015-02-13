@@ -1,6 +1,6 @@
 {
   "name": "angular-schema-form-fontpicker",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Fontpicker add-on for schema form",
   "scripts": {
     "test": "rm -fr coverage && ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS karma.conf.js"

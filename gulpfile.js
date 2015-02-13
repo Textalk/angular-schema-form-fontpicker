@@ -37,7 +37,7 @@ gulp.task('non-minified-dist', function() {
   stream.queue(
               gulp.src('./src/templates/*.html')
                   .pipe(templateCache({
-                    module: 'schemaFormFontpicker',
+                    module: 'schemaForm',
                     root: 'directives/decorators/bootstrap/fontpicker/'
                   }))
     );
