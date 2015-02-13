@@ -59,7 +59,7 @@ mapping.
 
 | Schema             |   Default Form type  |
 |:-------------------|:------------:|
-| "type": "string" and "format": "font"   |   fontpicker   |
+| "type": "object" and "format": "font"   |   fontpicker   |
 
 Form Type Options
 -------
