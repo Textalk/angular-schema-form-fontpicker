@@ -14,6 +14,7 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', function(
       scope.angular = angular;
       scope.modelValues = modelValues;
       scope.activePane = 'preset';
+      scope.dropdown = false;
       scope.translations = {};
       scope.previewExpanded = true;
       scope.custom = {
@@ -125,6 +126,7 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', function(
         ngModel.$setViewValue({name: fontObj.name, url: fontObj.url});
         modelValues.preset = fontObj;
         modelValues.current = modelValues.preset;
+        scope.dropdown = false;
       };
 
       // Can be used in 2 ways, one is sending in a font object, for example
@@ -209,7 +211,7 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', function(
               scope.failedFont = familyName;
               scope.$apply();
             },
-            timeout: 2000
+            timeout: 3000
           });
         });
       }
