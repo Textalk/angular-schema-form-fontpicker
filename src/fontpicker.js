@@ -78,7 +78,7 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', function(
               {name: 'Abril Fatface',        url: fonturl + 'Abril+Fatface'},
               {name: 'Playfair Display SC',  url: fonturl + 'Playfair+Display+SC'},
               {name: 'Open Sans',            url: fonturl + 'Open+Sans:400,700,300,800'},
-              {name: 'Lato',                 url: fonturl + 'Lato:100,300,400,700,900'},
+              {name: 'Lato',                 url: fonturl + 'Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'},
               {name: 'Ubuntu',               url: fonturl + 'Ubuntu:300,400,500,700'},
               {name: 'PT Sans',              url: fonturl + 'PT+Sans:400,700'},
               {name: 'Droid Sans',           url: fonturl + 'Droid+Sans:400,700'},
