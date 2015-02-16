@@ -55,17 +55,11 @@
       <button class="anytype-btn btn btn-default col-xs-1" type="button" ng-disabled="custom.loading" ng-click="loadCustomFont()">{{strings.loadButton}}</button>
     </div>
   </div>
-  <style>
-    .fontpicker .previewRow {
-      font-size: {{preview.defaultSize}}pt;
-      font-family: '{{modelValues.current.name}}'
-    }
-  </style>
   <div class="row" ng-if="modelValues.current.name">
     <div class="col-xs-11 preview">
       <p ng-click="((key === 0 && preview.styles.length > 1) && togglePreview())" ng-hide="previewExpanded === false && key > 0" ng-repeat="(key, style) in preview.styles"
          class='previewRow'
-         ng-style="angular.extend(style, {'cursor': (key === 0 && preview.styles.length > 1) ? 'pointer' : 'default'})">
+         ng-style="angular.extend(style, {'cursor': (key === 0 && preview.styles.length > 1) ? 'pointer' : 'default', 'font-family': modelValues.current.name, 'font-size': preview.defaultSize+'pt'})">
         {{preview.text}}
       </p>
     </div>
