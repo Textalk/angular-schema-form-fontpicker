@@ -1,6 +1,6 @@
 <div class="fontpicker">
-  <div class="alert alert-danger" role="alert" ng-show="failedFont.length > 0">
-    {{failedFont}} {{strings.loadError}}
+  <div class="alert alert-danger fontpicker-failedFont" role="alert" ng-if="failedFont.length > 0">
+    {{ loadError({fontName:failedFont}) }}
   </div>
   <div class="row" ng-if="paneButtons.preset.show && paneButtons.custom.show">
     <div class="btn-group col-xs-12" role="group">
@@ -66,5 +66,3 @@
     <div ng-click="togglePreview()" class="col-xs-1 caretsign pointer">{{previewExpanded == true ? '&#x25B2;' : '&#x25BC;'}}</div>
   </div>
 </div>
-
-

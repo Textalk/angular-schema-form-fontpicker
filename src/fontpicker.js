@@ -1,5 +1,5 @@
 /*global WebFont: false */
-angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', function($q) {
+angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpolate', function($q, $interpolate) {
   'use strict';
   return {
     restrict: 'AE',
@@ -52,7 +52,7 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', function(
           if (!scope.strings) { scope.strings = {}; }
           if (!scope.strings.loadButton) { scope.strings.loadButton = 'Load'; }
           if (!scope.strings.dropdown) { scope.strings.dropdown = 'Choose font'; }
-          if (!scope.strings.loadError) { scope.strings.loadError = 'could not be loaded.'; }
+          if (!scope.strings.loadError) { scope.strings.loadError = '{{fontName}} could not be loaded.'; }
           if (!scope.strings.customFontDesc) {
             scope.strings.customFontDesc = 'You can load any font from <a href="https://www.' +
             'google.com/fonts">Google Fonts</a>. Simply open any font by pressing the "Quick Use' +
@@ -95,6 +95,10 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', function(
           // Load initial fonts for preset list.
           loadFonts(scope.fontlist, 'preset');
           ngModel.$render();
+
+          // Set up load error message
+          scope.loadError = $interpolate(scope.strings.loadError);
+
           once();
         }
 

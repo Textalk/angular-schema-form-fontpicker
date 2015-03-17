@@ -10,14 +10,17 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'bower_components/jquery/dist/jquery.min.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/angular-schema-form/dist/schema-form.js',
       'bower_components/angular-schema-form/dist/bootstrap-decorator.min.js',
       'bower_components/objectpath/lib/ObjectPath.js',
-      'src/*.js',
-      'src/**/*.html',
+      'bower_components/tv4/tv4.js',
+      'bower_components/webfontloader/webfontloader.js',
+      'src/bootstrap-fontpicker.js',
+      'src/fontpicker.js',
+      'src/xAttrDirectives.js',
+      'src/templates/*.html',
       'test/tests.js'
     ],
 
@@ -32,7 +35,7 @@ module.exports = function(config) {
 
     preprocessors: {
       'src/**/*.js': ['coverage'],
-      'src/**/*.html': ['ng-html2js']
+      'src/templates/*.html': ['ng-html2js']
     },
 
     // optionally, configure the reporter
@@ -43,7 +46,8 @@ module.exports = function(config) {
 
     ngHtml2JsPreprocessor: {
       cacheIdFromPath: function(filepath) {
-        return 'directives/decorators/bootstrap/fontpicker/' + filepath.substr(4);
+        console.log('directives/decorators/bootstrap/fontpicker/' + filepath.substr(14), filepath)
+        return 'directives/decorators/bootstrap/fontpicker/' + filepath.substr(14);
       },
       moduleName: 'templates'
     },
