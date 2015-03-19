@@ -65,7 +65,7 @@ Form Type Options
 -------
 The `fontpicker` form type a wide veriety of options, the main 4 groups of settings are: `fontlist`, `preview`, `paneButtons` and `strings`. These themselves can contain several suboptions.
 
-**All options are optional, even if you include a group of options, not all sub-options have to be set. So only override what you need.** 
+**All options are optional, even if you include a group of options, not all sub-options have to be set. So only override what you need.**
 
 ### `fontlist`
 This option is a simple array of objects that have a name and url. This is presented as a list of fonts to choose from. These are fonts from Google Fonts. Example
@@ -106,7 +106,7 @@ These are the rest of the strings that can be supplied for translations or just 
 |:---------------|:------------:|:------------:|
 |  loadButton    | Label for load button | Load |
 |  dropdown    | The string in the dropdown of fonts, before one is selected. | Choose font |
-|  loadError    | When a custom font can't be loaded. Format is name of font then the string. | could not be loaded. |
+|  loadError    | When a custom font can't be loaded. It's $interpolated with the variable `fontName`.  | {{fontName}} could not be loaded. |
 | customFontDesc | Intructions for loading a font. Default contains a long description of how the get the google fonts url. | You can load any font from <a href="https://www.google.com/fonts">Google Fonts</a>...
 
 ### Examples
@@ -143,7 +143,7 @@ Below is an example where every option is overriden, but as mentioned below, the
   "strings": {
     "loadButton": "Load it!",
     "dropdown": "Font",
-    "loadError": "could really not be gotten.",
+    "loadError": "{{fontName}} could really not be gotten.",
     "customFontDesc": "Just google it."
   }
 }
