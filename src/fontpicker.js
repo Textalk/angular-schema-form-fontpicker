@@ -116,7 +116,9 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
 
         if (presetFont) {
           scope.activePane = 'preset';
-          scope.chooseFont(ngModel.$viewValue);
+          modelValues.preset = ngModel.$viewValue;
+          modelValues.current = modelValues.preset;
+          scope.dropdown = false;
         }
         else {
           scope.activePane = 'custom';
