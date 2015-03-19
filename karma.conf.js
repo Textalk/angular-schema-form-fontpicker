@@ -46,7 +46,6 @@ module.exports = function(config) {
 
     ngHtml2JsPreprocessor: {
       cacheIdFromPath: function(filepath) {
-        console.log('directives/decorators/bootstrap/fontpicker/' + filepath.substr(14), filepath)
         return 'directives/decorators/bootstrap/fontpicker/' + filepath.substr(14);
       },
       moduleName: 'templates'
