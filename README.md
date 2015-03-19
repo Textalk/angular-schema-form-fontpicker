@@ -143,7 +143,7 @@ Below is an example where every option is overriden, but as mentioned below, the
   "strings": {
     "loadButton": "Load it!",
     "dropdown": "Font",
-    "loadError": "could really not be gotten.",
+    "loadError": "{{fontName}} could really not be gotten.",
     "customFontDesc": "Just google it."
   }
 }
