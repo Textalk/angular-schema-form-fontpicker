@@ -133,6 +133,7 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
         modelValues.preset = fontObj;
         modelValues.current = modelValues.preset;
         scope.dropdown = false;
+        return false;
       };
 
       // Can be used in 2 ways, one is sending in a font object, for example
