@@ -37,7 +37,7 @@
         <button ng-click="dropdown = !dropdown" class="btn btn-default dropdown-toggle" ng-style="{'font-family': modelValues.preset.name == 'Font' ? '' : modelValues.preset.name }" style="min-width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> {{modelValues.preset.name || strings.dropdown}} <span class="caret"></span> </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" ng-show="dropdown">
           <li ng-click="chooseFont(font)" role="presentation" style="font-family: '{{font.name}}'" ng-repeat="(key, font) in fontlist">
-            <a role="menuitem" tabindex="-1" href="#">{{font.name}}</a>
+            <a role="menuitem" tabindex="-1" href="javascript:return false;">{{font.name}}</a>
           </li>
         </ul>
       </div>
