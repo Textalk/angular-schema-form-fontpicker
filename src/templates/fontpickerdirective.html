@@ -33,9 +33,9 @@
       <svg class="label fonticon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="83.178 0 645.914 736.859" enable-background="new 83.178 0 645.914 736.859"><path fill="#231F20" d="M701.562 692.248c-8.223-4.176-15.68-8.213-17.7-10.49-7.02-7.908-7.378-14.375-10.718-23.617-5.377-14.878-12.34-29.087-18.02-44.06-20.12-53.058-40.57-106.165-62.43-158.575-50.47-121.017-97.237-243.76-145.753-365.585-11.266-28.29-22.4-56.65-33.664-84.93 0 0-28.12-6.372-30.346 0-25.59 73.21-83.14 217.562-83.14 217.562L164.07 576.81l-28.037 79.646s-12.376 26.664-22.376 36.188c-3.213 3.06-30.384 17.94-30.48 15.95L84.43 734.7l163.298.002s.178-18.436 0-27.645c.035 1.785-33.015-11.973-36-14.73-10.07-9.297-19.68-25.517-15-38.907 3.49-9.984 70-189.396 70-189.396h209s61.924 174.53 66 182.744c19.782 39.865-15.52 58.564-49 59.75l1 28.182h235.364s-1.14-27.965-1.147-28.182c-.06-1.45-14.077-8.018-26.383-14.27zM278.27 425.982l95.348-247.48 91.11 247.428-186.458.052z"/></svg>
     </div>
     <div class="col-xs-11">
-      <div class="dropdown">
+      <div class="dropdown" ng-class="{open: dropdown}">
         <button ng-click="dropdown = !dropdown" class="btn btn-default dropdown-toggle" ng-style="{'font-family': modelValues.preset.name == 'Font' ? '' : modelValues.preset.name }" style="min-width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> {{modelValues.preset.name || strings.dropdown}} <span class="caret"></span> </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" ng-show="dropdown">
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
           <li ng-click="chooseFont(font)" role="presentation" style="font-family: '{{font.name}}'" ng-repeat="(key, font) in fontlist">
             <a role="menuitem" tabindex="-1" href="javascript:return false;">{{font.name}}</a>
           </li>
