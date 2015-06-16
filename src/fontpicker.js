@@ -71,7 +71,6 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
 
           if (!scope.fontlist) {
             scope.fontlist = [
-              {name: 'Roboto',               url: fonturl + 'Roboto:400italic,700,400'},
               {name: 'Old Standard TT',      url: fonturl + 'Old+Standard+TT:400,400italic,700'},
               {name: 'Josefin Slab',         url: fonturl + 'Josefin+Slab:300,400,700'},
               {name: 'Arvo',                 url: fonturl + 'Arvo:400,700'},
