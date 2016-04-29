@@ -174,6 +174,10 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
         scope.previewExpanded  = !scope.previewExpanded;
       };
 
+      scope.addQuotes = function(string) {
+        return '"' + string + '"';
+      };
+
       // Takes an import/link/url from google fonts and parses the name and url.
       function parseCustomFont(font) {
         if (/^(?:<link|@import|http)/.test(font)) {
