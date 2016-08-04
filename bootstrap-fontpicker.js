@@ -30,7 +30,7 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
     templateUrl: 'directives/decorators/bootstrap/fontpicker/fontpickerdirective.html',
     link: function(scope, element, attrs, ngModel) {
 
-      var fonturl = 'http://fonts.googleapis.com/css?family=';
+      var fonturl = '//fonts.googleapis.com/css?family=';
       var modelValues = {};
       scope.Math = window.Math;
       scope.angular = angular;
@@ -113,6 +113,11 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
               {name: 'Calligraffitti',       url: fonturl + 'Calligraffitti'}
             ];
           }
+
+          // Make the links schema agnostic.
+          const tempArr = scope.fontlist.map(function(font) {
+            return font.url.replace(/http[s]*:\/\//, '//');
+          });
 
           // Load initial fonts for preset list.
           loadFonts(scope.fontlist, 'preset');
