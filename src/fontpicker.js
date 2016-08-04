@@ -7,7 +7,6 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
     require: 'ngModel',
     templateUrl: 'directives/decorators/bootstrap/fontpicker/fontpickerdirective.html',
     link: function(scope, element, attrs, ngModel) {
-      alert('LOADED');
       var fonturl = '//fonts.googleapis.com/css?family=';
       var modelValues = {};
       scope.Math = window.Math;
@@ -93,8 +92,8 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
           }
 
           // Make the links schema agnostic.
-          const tempArr = scope.fontlist.map(function(font) {
-            return font.url.replace(/^http[s]*:\/\//, '//');
+          scope.fontlist = scope.fontlist.map(function(font) {
+            return {name: font.name, url: font.url.replace(/^http[s]*:\/\//, '//')};
           });
 
           // Load initial fonts for preset list.
