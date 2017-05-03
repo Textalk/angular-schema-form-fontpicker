@@ -3,7 +3,7 @@
   "main": [
     "bootstrap-fontpicker.min.js"
   ],
-  "version": "0.4.1",
+  "version": "0.5.0",
   "authors": [
     "Textalk",
     "Denis Dervisevic <denis@dervisevic.se>"
