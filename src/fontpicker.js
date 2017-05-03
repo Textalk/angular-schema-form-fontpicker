@@ -53,11 +53,11 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
           if (!scope.strings.dropdown) { scope.strings.dropdown = 'Choose font'; }
           if (!scope.strings.loadError) { scope.strings.loadError = '{{fontName}} could not be loaded.'; }
           if (!scope.strings.customFontDesc) {
-            scope.strings.customFontDesc = 'You can load any font from <a href="https://www.' +
-            'google.com/fonts">Google Fonts</a>. Simply open any font by pressing the "Quick Use' +
-            ' (right arrow)" button in the list. Make any alterations you wish in steps 1 and 2,' +
-            ' then copy the "Standard" link from step 3. When you hit load the font is loaded and' +
-            ' can be previewed. When you need to use the font, check step 4.';
+            scope.strings.customFontDesc = 'You can load any font from <a href="https://fonts.google.com/">'+
+            'Google Fonts</a>. Press the red (+) icon next to any font. A bar will appear at the bottom of the page.'+
+            'Press that bar, and under Embed font, copy the full text in the gray box that starts with <link.'+
+            'Now paste that below here and press the load button. The font is loaded and can be previewed.'+
+            'On google fonts, below the embed code, under the section "Specify in CSS", it details how to use the font.';
           }
 
           if (!scope.paneButtons) { scope.paneButtons = {}; }
@@ -184,9 +184,15 @@ angular.module('schemaFormFontpicker').directive('fontPicker',  ['$q', '$interpo
 
       // Takes an import/link/url from google fonts and parses the name and url.
       function parseCustomFont(font) {
-        if (/^(?:<link|@import|http)/.test(font)) {
+        if (/^(?:<link|http)/.test(font)) {
           var fontObj = {};
-          var match = /^(?:<link href='|@import url\()*([^')]+)+/.exec(font);
+
+          if (/^http/.test(font)) {
+            var match = /^(?:<link href='|@import url\()*([^')]+)+/.exec(font);
+          } else if (/^<link/.test(font)) {
+            var match = /^<link href="([^")]+)".+/.exec(font);
+          }
+
           fontObj.url = match[1];
           var nameRaw = /.*ily=([^:]+)+/.exec(fontObj.url);
           if (nameRaw === null) { scope.failedFont = font; return false; }
